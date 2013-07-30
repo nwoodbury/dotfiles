@@ -1,12 +1,5 @@
 :colorscheme slate
 
-:set expandtab
-:set shiftwidth=4
-:set tabstop=4
-
-:set mouse=a
-
-:set hls is
 
 "==================================================
 " Vundle
@@ -21,24 +14,41 @@
  " let Vundle manage Vundle
  " required! 
  Bundle 'gmarik/vundle'
- " My Bundles here:
+
+ " Coding
+ Bundle 'scrooloose/syntastic'
+
+ " python
+ Bundle 'klen/python-mode'
+ Bundle 'alfredodeza/pytest.vim'
+ Bundle 'ivanov/vim-ipython'
+ Bundle 'julienr/vimux-pyutils'
+ Bundle 'davidhalter/jedi-vim'
+ Bundle 'michaeljsmith/vim-indent-object'
+ 
+ " Custom Vundles
  "
  Bundle 'https://github.com/scrooloose/nerdtree'
  Bundle 'https://github.com/kien/ctrlp.vim'
+
  " original repos on github
  Bundle 'tpope/vim-fugitive'
  Bundle 'Lokaltog/vim-easymotion'
  Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
  Bundle 'tpope/vim-rails.git'
+
  " vim-scripts repos
  Bundle 'L9'
  Bundle 'FuzzyFinder'
+ 
  " non github repos
  Bundle 'git://git.wincent.com/command-t.git'
+
  " git repos on your local machine (ie. when working on your own plugin)
  " Bundle 'file:///Users/gmarik/path/to/plugin'
  " ...
-
+ 
+ 
  filetype plugin indent on     " required!
  "
  " Brief help
@@ -49,3 +59,27 @@
  "
  " see :h vundle for more details or wiki for FAQ
  " NOTE: comments after Bundle command are not allowed..
+
+"==================================================
+" Other Settings
+"==================================================
+
+" Tab Spacing
+:set expandtab
+:set shiftwidth=4
+:set softtabstop=4
+:set shiftround
+
+" Mouse
+:set mouse=a
+
+" Python
+let g:jedi#auto_vim_configuration = 0
+set completeopt="menu"
+let g:pymode_doc = 0
+let g:pymode_run = 0
+let g:pymode_lint = 0
+let g:pymode_rop = 0
+
+:set hls is
+
