@@ -70,6 +70,9 @@
 :set softtabstop=4
 :set shiftround
 
+" Color Column
+:set colorcolumn=80
+
 " Mouse
 :set mouse=a
 
