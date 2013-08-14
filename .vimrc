@@ -76,6 +76,12 @@
 " Mouse
 :set mouse=a
 
+" NerdTree
+autocmd vimenter * if !argc() | NERDTree | endif
+map <C-n> :NERDTreeToggle<CR>
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") &&
+            \ b:NERDTreeType == "primary") | q | endif
+
 " Python
 let g:jedi#auto_vim_configuration = 0
 set completeopt="menu"
