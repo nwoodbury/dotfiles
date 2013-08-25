@@ -23,7 +23,7 @@
  Bundle 'alfredodeza/pytest.vim'
  Bundle 'ivanov/vim-ipython'
  Bundle 'julienr/vimux-pyutils'
- Bundle 'davidhalter/jedi-vim'
+ " Bundle 'davidhalter/jedi-vim'
  Bundle 'michaeljsmith/vim-indent-object'
  
  " Custom Vundles
