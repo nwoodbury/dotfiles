@@ -1,6 +1,5 @@
 :colorscheme slate
 
-
 "==================================================
 " Vundle
 "==================================================
@@ -25,6 +24,15 @@
  Bundle 'julienr/vimux-pyutils'
  " Bundle 'davidhalter/jedi-vim'
  Bundle 'michaeljsmith/vim-indent-object'
+
+ " HTML
+ Bundle 'mattn/emmet-vim'
+
+ " JavaScript
+ Bundle 'jelera/vim-javascript-syntax'
+ Bundle 'pangloss/vim-javascript'
+ Bundle 'nathanaelkane/vim-indent-guides'
+ Bundle 'Raimondi/delimitMate'
  
  " Custom Vundles
  "
@@ -40,6 +48,9 @@
  " vim-scripts repos
  Bundle 'L9'
  Bundle 'FuzzyFinder'
+
+ " Themes
+ Bundle 'Lokaltog/vim-distinguished'
  
  " non github repos
  " Bundle 'git://git.wincent.com/command-t.git'
@@ -75,6 +86,9 @@
 
 " Mouse
 :set mouse=a
+
+" In-edit line-splitting (ctrl-o)
+imap <C-o> <CR><Esc>O
 
 " NerdTree
 autocmd vimenter * if !argc() | NERDTree | endif
