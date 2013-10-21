@@ -81,6 +81,9 @@
 :set softtabstop=4
 :set shiftround
 
+" Remove trailing whitespace in save
+autocmd BufWritePre * :%s/\s\+$//e
+
 " Color Column
 :set colorcolumn=80
 
