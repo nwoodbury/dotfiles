@@ -11,11 +11,12 @@
  call vundle#rc()
 
  " let Vundle manage Vundle
- " required! 
+ " required!
  Bundle 'gmarik/vundle'
 
  " Coding
  Bundle 'scrooloose/syntastic'
+ " Bundle 'Raimondi/delimitMate'
 
  " python
  Bundle 'klen/python-mode'
@@ -25,17 +26,14 @@
  " Bundle 'davidhalter/jedi-vim'
  Bundle 'michaeljsmith/vim-indent-object'
 
- " HTML
- Bundle 'mattn/emmet-vim'
+ " HTML / XML
 
  " JavaScript
  Bundle 'jelera/vim-javascript-syntax'
  Bundle 'pangloss/vim-javascript'
  Bundle 'nathanaelkane/vim-indent-guides'
- Bundle 'Raimondi/delimitMate'
- 
+
  " Custom Vundles
- "
  Bundle 'https://github.com/scrooloose/nerdtree'
  Bundle 'https://github.com/kien/ctrlp.vim'
 
@@ -51,15 +49,15 @@
 
  " Themes
  Bundle 'Lokaltog/vim-distinguished'
- 
+
  " non github repos
  " Bundle 'git://git.wincent.com/command-t.git'
 
  " git repos on your local machine (ie. when working on your own plugin)
  " Bundle 'file:///Users/gmarik/path/to/plugin'
  " ...
- 
- 
+
+
  filetype plugin indent on     " required!
  "
  " Brief help
@@ -106,6 +104,9 @@ let g:pymode_doc = 0
 let g:pymode_run = 0
 let g:pymode_lint = 0
 let g:pymode_rop = 0
+
+" HTML / XML
+au filetype html inoremap ><Tab> ><Esc>F<lyt>o</<C-r>"><Esc>O<Space>
 
 :set hls is
 
