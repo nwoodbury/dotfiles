@@ -16,7 +16,7 @@
 
  " Coding
  Bundle 'scrooloose/syntastic'
- " Bundle 'Raimondi/delimitMate'
+ Bundle 'Raimondi/delimitMate'
 
  " python
  Bundle 'klen/python-mode'
