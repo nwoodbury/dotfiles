@@ -16,6 +16,7 @@
 
  " Coding
  Bundle 'scrooloose/syntastic'
+ Bundle 'Raimondi/delimitMate'
 
  " python
  Bundle 'klen/python-mode'
@@ -25,10 +26,6 @@
  " Bundle 'davidhalter/jedi-vim'
  Bundle 'michaeljsmith/vim-indent-object'
 
- " HTML
- Bundle 'mattn/emmet-vim'
- Bundle 'sukima/xmledit'
-
  " JavaScript
  Bundle 'jelera/vim-javascript-syntax'
  Bundle 'pangloss/vim-javascript'
@@ -36,7 +33,6 @@
  Bundle 'Raimondi/delimitMate'
 
  " Custom Vundles
- "
  Bundle 'https://github.com/scrooloose/nerdtree'
  Bundle 'https://github.com/kien/ctrlp.vim'
 
