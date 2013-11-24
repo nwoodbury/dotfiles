@@ -11,7 +11,7 @@
  call vundle#rc()
 
  " let Vundle manage Vundle
- " required! 
+ " required!
  Bundle 'gmarik/vundle'
 
  " Coding
@@ -27,13 +27,14 @@
 
  " HTML
  Bundle 'mattn/emmet-vim'
+ Bundle 'sukima/xmledit'
 
  " JavaScript
  Bundle 'jelera/vim-javascript-syntax'
  Bundle 'pangloss/vim-javascript'
  Bundle 'nathanaelkane/vim-indent-guides'
  Bundle 'Raimondi/delimitMate'
- 
+
  " Custom Vundles
  "
  Bundle 'https://github.com/scrooloose/nerdtree'
@@ -51,15 +52,15 @@
 
  " Themes
  Bundle 'Lokaltog/vim-distinguished'
- 
+
  " non github repos
  " Bundle 'git://git.wincent.com/command-t.git'
 
  " git repos on your local machine (ie. when working on your own plugin)
  " Bundle 'file:///Users/gmarik/path/to/plugin'
  " ...
- 
- 
+
+
  filetype plugin indent on     " required!
  "
  " Brief help
@@ -98,6 +99,7 @@ autocmd vimenter * if !argc() | NERDTree | endif
 map <C-n> :NERDTreeToggle<CR>
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") &&
             \ b:NERDTreeType == "primary") | q | endif
+let NERDTreeShowHidden = 1
 
 " Python
 let g:jedi#auto_vim_configuration = 0
@@ -106,6 +108,12 @@ let g:pymode_doc = 0
 let g:pymode_run = 0
 let g:pymode_lint = 0
 let g:pymode_rop = 0
+
+" XML
+let xml_use_xhtml = 1
+let xml_tag_syntax_prefixes = 'html\|xml\|xsl\|section\|docbk'
+    " Add 'section' so that the xml tag recognizes angular views
+au FileType html,xml let b:delimitMate_matchpairs = "(:),[:],{:}"
 
 :set hls is
 
