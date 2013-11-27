@@ -95,7 +95,7 @@ autocmd vimenter * if !argc() | NERDTree | endif
 map <C-n> :NERDTreeToggle<CR>
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") &&
             \ b:NERDTreeType == "primary") | q | endif
-let NERDTreeShowHidden = 1
+let NERDTreeShowHidden = 0
 
 " Python
 let g:jedi#auto_vim_configuration = 0
