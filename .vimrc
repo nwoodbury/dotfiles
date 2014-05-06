@@ -17,6 +17,7 @@
  " Coding
  Bundle 'scrooloose/syntastic'
  Bundle 'Raimondi/delimitMate'
+ Bundle 'editorconfig/editorconfig-vim'
 
  " python
  Bundle 'klen/python-mode'
@@ -95,15 +96,17 @@ autocmd vimenter * if !argc() | NERDTree | endif
 map <C-n> :NERDTreeToggle<CR>
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") &&
             \ b:NERDTreeType == "primary") | q | endif
-let NERDTreeShowHidden = 0
+let NERDTreeShowHidden = 1
+let NERDTreeIgnore = ['\.pyc$', '\.swp', '\.ipynb', '\.ipynb_checkpoints', '\.git']
 
 " Python
 let g:jedi#auto_vim_configuration = 0
 set completeopt="menu"
 let g:pymode_doc = 0
 let g:pymode_run = 0
-let g:pymode_lint = 0
-let g:pymode_rop = 0
+let g:pymode_lint = 1
+let g:pymode_lint_unmodified = 1
+let g:pymode_rope = 0
 let g:pymode_folding = 0
 
 " XML
