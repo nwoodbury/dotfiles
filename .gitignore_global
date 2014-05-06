@@ -51,3 +51,9 @@ Thumbs.db
 *.swp
 *~
 *.swo
+
+# Python #
+##########
+
+*.egg-info/
+*.pyc
