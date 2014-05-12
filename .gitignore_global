@@ -57,4 +57,5 @@ Thumbs.db
 
 *.egg-info/
 *.pyc
+*.py~
 .ipynb_checkpoints/
