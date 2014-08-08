@@ -102,7 +102,7 @@ map <C-n> :NERDTreeToggle<CR>
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") &&
             \ b:NERDTreeType == "primary") | q | endif
 let NERDTreeShowHidden = 1
-let NERDTreeIgnore = ['\.pyc$', '\.swp', '\.ipynb', '\.ipynb_checkpoints', '\.git', '\.egg-info', '\.py\~']
+let NERDTreeIgnore = ['\.pyc$', '\.swp', '\.ipynb', '\.ipynb_checkpoints', '\.git/*', '\.egg-info', '\.py\~']
 
 " Python
 let g:jedi#auto_vim_configuration = 0
