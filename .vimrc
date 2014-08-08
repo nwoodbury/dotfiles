@@ -4,61 +4,66 @@
 " Vundle
 "==================================================
 
- set nocompatible               " be iMproved
- filetype off                   " required!
+ set nocompatible              " be iMproved, required
+ filetype off                  " required
 
- set rtp+=~/.vim/bundle/vundle/
- call vundle#rc()
+ " set the runtime path to include Vundle and initialize
+ set rtp+=~/.vim/bundle/Vundle.vim
+ call vundle#begin()
+ " alternatively, pass a path where Vundle should install plugins
+ "call vundle#begin('~/some/path/here')
 
- " let Vundle manage Vundle
- " required!
- Bundle 'gmarik/vundle'
+ " let Vundle manage Vundle, required
+ Plugin 'gmarik/Vundle.vim'
 
  " Coding
- Bundle 'scrooloose/syntastic'
- Bundle 'Raimondi/delimitMate'
- Bundle 'editorconfig/editorconfig-vim'
+ Plugin 'scrooloose/syntastic'
+ Plugin 'Raimondi/delimitMate'
+ Plugin 'editorconfig/editorconfig-vim'
 
  " python
- Bundle 'klen/python-mode'
- Bundle 'alfredodeza/pytest.vim'
- Bundle 'ivanov/vim-ipython'
- Bundle 'julienr/vimux-pyutils'
- " Bundle 'davidhalter/jedi-vim'
- Bundle 'michaeljsmith/vim-indent-object'
+ Plugin 'klen/python-mode'
+ Plugin 'alfredodeza/pytest.vim'
+ Plugin 'ivanov/vim-ipython'
+ Plugin 'julienr/vimux-pyutils'
+ " Plugin 'davidhalter/jedi-vim'
+ Plugin 'michaeljsmith/vim-indent-object'
 
  " JavaScript
- Bundle 'jelera/vim-javascript-syntax'
- Bundle 'pangloss/vim-javascript'
- Bundle 'nathanaelkane/vim-indent-guides'
- Bundle 'Raimondi/delimitMate'
+ Plugin 'jelera/vim-javascript-syntax'
+ Plugin 'pangloss/vim-javascript'
+ Plugin 'nathanaelkane/vim-indent-guides'
 
  " Custom Vundles
- Bundle 'https://github.com/scrooloose/nerdtree'
- Bundle 'https://github.com/kien/ctrlp.vim'
+ Plugin 'https://github.com/scrooloose/nerdtree'
+ Plugin 'https://github.com/kien/ctrlp.vim'
 
  " original repos on github
- Bundle 'tpope/vim-fugitive'
- Bundle 'Lokaltog/vim-easymotion'
- Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
- Bundle 'tpope/vim-rails.git'
+ Plugin 'tpope/vim-fugitive'
+ Plugin 'Lokaltog/vim-easymotion'
+ Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
+ Plugin 'tpope/vim-rails.git'
 
  " vim-scripts repos
- Bundle 'L9'
- Bundle 'FuzzyFinder'
+ Plugin 'L9'
+ Plugin 'FuzzyFinder'
 
  " Themes
- Bundle 'Lokaltog/vim-distinguished'
+ Plugin 'Lokaltog/vim-distinguished'
 
  " non github repos
- " Bundle 'git://git.wincent.com/command-t.git'
+ " Plugin 'git://git.wincent.com/command-t.git'
 
  " git repos on your local machine (ie. when working on your own plugin)
- " Bundle 'file:///Users/gmarik/path/to/plugin'
+ " Plugin 'file:///Users/gmarik/path/to/plugin'
  " ...
 
 
- filetype plugin indent on     " required!
+ " All of your Plugins must be added before the following line
+ call vundle#end()            " required
+ filetype plugin indent on    " required
+ " To ignore plugin indent changes, instead use:
+ " `filetype plugin on
  "
  " Brief help
  " :BundleList          - list configured bundles
