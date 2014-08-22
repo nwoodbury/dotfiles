@@ -90,7 +90,7 @@ let g:pymode_options = 1
 let g:pymode_options_max_line_length = 79
 let g:pymode_lint = 1
 let g:pymode_lint_on_fly = 1
-let g:pymode_rope = 1
+let g:pymode_rope = 0
 
 " NerdTree
 autocmd vimenter * if !argc() | NERDTree | endif
